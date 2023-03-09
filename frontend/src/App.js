@@ -1,5 +1,4 @@
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
-import MainNavigation from './components/MainNavigation';
 import EditEventPage from './pages/EditEventPage';
 import EventDetailPage from './pages/EventDetailPage';
 import EventsPage from './pages/EventsPage';
@@ -8,7 +7,6 @@ import NewEventPage from './pages/NewEventPage';
 import RootLayout from './pages/Root';
 
 
-// 4. Add properly working links to the MainNavigation
 // 5. Ensure that the links in MainNavigation receive an "active" class when active
 // 6. Output a list of dummy events to the EventsPage
 //    Every list item should include a link to the respective EventDetailPage
