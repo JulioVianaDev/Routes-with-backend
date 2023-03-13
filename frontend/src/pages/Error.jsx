@@ -6,7 +6,7 @@ function Error() {
   const error = useRouteError()
   let title="um erro foi encontrado"
   let message= 'Algo deu muito errado'
-  console.log(error.status)
+  // console.log(error.status)
   if (error.status === 500){
     // para o json puro 
     // message=JSON.parse(error.data).message 

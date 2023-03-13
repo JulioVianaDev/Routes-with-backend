@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"arrumando o fetch","image":"https://w0.peakpx.com/wallpaper/103/754/HD-wallpaper-disney-land-disnet-pretty-castle-xmas-lights-thumbnail.jpg","date":"2023-12-31","description":"aaaaaaaaaaaaaa\n","id":"0201fd9d-c41f-4699-be62-f08cc5fa94a0"},{"title":"batata","image":"https://w0.peakpx.com/wallpaper/103/754/HD-wallpaper-disney-land-disnet-pretty-castle-xmas-lights-thumbnail.jpg","date":"2023-03-16","description":"a","id":"503bc2cd-51ac-4529-8432-ed461ada9a6b"},{"title":"disney 2","image":"https://w0.peakpx.com/wallpaper/103/754/HD-wallpaper-disney-land-disnet-pretty-castle-xmas-lights-thumbnail.jpg","date":"2023-03-15","description":"aaaaaaaaaaaaaaaaaaaaaaaaaaa","id":"7822d2a8-2ad5-42c3-b388-f041e54b421d"},{"title":"disneeeeeeeeeeey","image":"https://dayton247now.com/resources/media/4ff84098-ca2f-4d5c-b24c-2ea6cc7141e1-full36x25_AP21173416004367.jpg?1624378389246","date":"2023-03-14","description":"uma ft pesada","id":"d29e2545-1e69-432a-9283-0143642616cb"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
