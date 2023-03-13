@@ -1,6 +1,6 @@
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import EditEventPage from './pages/EditEventPage';
-import Error from './pages/Erros';
+import Error from './pages/Error';
 import EventDetailPage from './pages/EventDetailPage';
 import EventsPage,{loader as eventsLoader} from './pages/Events';
 import EventsRoot from './pages/EventsRoot';

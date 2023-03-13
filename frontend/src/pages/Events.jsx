@@ -20,7 +20,12 @@ export async function loader(){
 
   if (!response.ok) {
     // return { isError: true,message: 'não foi possivel  buscar os eventos'}
-    throw { message: 'não foi possivel buscar os eventos'};
+    throw new Response(
+                        JSON.stringify(
+                          {message: "Não foi possivel buscar os eventos"}
+                        ),
+                        {status: 500}
+                      )
   } else {
     return response;
   }
