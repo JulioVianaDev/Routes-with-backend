@@ -6,8 +6,12 @@ function Error() {
   const error = useRouteError()
   let title="um erro foi encontrado"
   let message= 'Algo deu muito errado'
+  console.log(error.status)
   if (error.status === 500){
-    message=JSON.parse(error.data).message
+    // para o json puro 
+    // message=JSON.parse(error.data).message 
+    //para o json do react router dom
+    message= error.data.message;
   }
 
   if (error.status === 404){
