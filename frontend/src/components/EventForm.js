@@ -18,19 +18,37 @@ function EventForm({ method, event }) {
           name="title" 
           required 
           defaultValue={event?  event.title : ''}
-        />
+          />
       </p>
       <p>
         <label htmlFor="image">Image</label>
-        <input id="image" type="url" name="image" required />
+        <input 
+          id="image" 
+          type="url" 
+          name="image" 
+          defaultValue={event?  event.image : ''}
+          required 
+          />
       </p>
       <p>
         <label htmlFor="date">Date</label>
-        <input id="date" type="date" name="date" required />
+        <input 
+          id="date" 
+          type="date" 
+          name="date" 
+          required 
+          defaultValue={event?  event.date : ''}
+        />
       </p>
       <p>
         <label htmlFor="description">Description</label>
-        <textarea id="description" name="description" rows="5" required />
+        <textarea 
+          id="description" 
+          name="description" 
+          rows="5" 
+          defaultValue={event?  event.description : ''}
+          required 
+        />
       </p>
       <div className={classes.actions}>
         <button type="button" onClick={cancelHandler}>
