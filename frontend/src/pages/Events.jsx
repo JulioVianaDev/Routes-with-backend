@@ -16,7 +16,7 @@ function EventsPage() {
 export default EventsPage;
 
 export async function loader(){
-  const response = await fetch('http://localhost:8080/evasdaents');
+  const response = await fetch('http://localhost:8080/events');
 
   if (!response.ok) {
     // return { isError: true,message: 'não foi possivel  buscar os eventos'}
