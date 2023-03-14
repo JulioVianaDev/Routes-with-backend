@@ -27,9 +27,11 @@ export async function loader({request,params}){
 
 }
 
-export async function action({params}){
+export async function action({params,request}){
   const id= params.id;
-  const response = await fetch('http://localhost:8080/events/'+id);
+  const response = await fetch('http://localhost:8080/events/'+id,{
+    method: request.method,
+  });
   if(!response.ok){
     throw json(
       {message: 'não foi possivel deletar o evento'},
