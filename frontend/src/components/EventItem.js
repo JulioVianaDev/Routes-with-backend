@@ -2,7 +2,10 @@ import classes from './EventItem.module.css';
 import { Link } from 'react-router-dom';
 function EventItem({ event }) {
   function startDeleteHandler() {
-    // ...
+    const proceed = window.confirm("está certo disto?")
+    if(proceed){
+    
+    }
   }
 
   return (
