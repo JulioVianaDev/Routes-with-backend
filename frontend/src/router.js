@@ -1,7 +1,10 @@
 
 import EditEventPage from './pages/EditEventPage';
 import Error from './pages/Error';
-import EventDetailPage,{loader as eventDetailLoader} from './pages/EventDetailPage';
+import EventDetailPage,{
+  loader as eventDetailLoader,
+  action as deleteAction
+} from './pages/EventDetailPage';
 import EventsPage,{loader as eventsLoader} from './pages/Events';
 import EventsRoot from './pages/EventsRoot';
 import HomePage from './pages/HomePage';
@@ -34,6 +37,7 @@ export const router = createBrowserRouter([
               {
                 index: true,
                 element: <EventDetailPage/>,
+                action: deleteAction
               },
               {
                 path: 'edit',

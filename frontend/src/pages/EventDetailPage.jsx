@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRouteLoaderData ,json} from 'react-router-dom'
+import {redirect, useRouteLoaderData ,json} from 'react-router-dom'
 import EventItem from '../components/EventItem.js'
 
 function EventDetailPage() {
@@ -25,4 +25,16 @@ export async function loader({request,params}){
   }
   
 
+}
+
+export async function action({params}){
+  const id= params.id;
+  const response = await fetch('http://localhost:8080/events/'+id);
+  if(!response.ok){
+    throw json(
+      {message: 'não foi possivel deletar o evento'},
+      {status: 500}
+    )
+  }
+  return redirect('/events')
 }
