@@ -11,7 +11,7 @@ import HomePage from './pages/HomePage';
 import NewEventPage,{action as newEventAction} from './pages/NewEventPage';
 import RootLayout from './pages/Root';
 import {createBrowserRouter} from 'react-router-dom'
-
+import {action as manipulateEventAction} from './components/EventForm';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -41,14 +41,15 @@ export const router = createBrowserRouter([
               },
               {
                 path: 'edit',
-                element: <EditEventPage/>
+                element: <EditEventPage/>,
+                action: manipulateEventAction
               },
             ]
           },
           {
             path: 'new',
             element: <NewEventPage/>,
-            action: newEventAction
+            action: manipulateEventAction
           },
         ] 
       },
