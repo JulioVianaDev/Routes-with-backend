@@ -1,7 +1,13 @@
-import { useNavigate ,Form,useNavigation,useActionData} from 'react-router-dom';
+import { 
+  useNavigate ,
+  Form,
+  useNavigation,
+  useActionData,
+  json,
+  redirect,
+} from 'react-router-dom';
 
 import classes from './EventForm.module.css';
-import {json,redirect} from 'react-router-dom';
 
 function EventForm({ method, event }) {
   const data = useActionData();
@@ -86,7 +92,7 @@ export async function action({request,params}){
   }
   let url ='http://localhost:8080/events'
 
-  if(method === 'patch'){
+  if(method === 'PATCH'){
     const  id = params.id; 
     url = 'http://localhost:8080/events/'+ id
   }
