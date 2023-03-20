@@ -8,10 +8,12 @@ import EventDetailPage,{
 import EventsPage,{loader as eventsLoader} from './pages/Events';
 import EventsRoot from './pages/EventsRoot';
 import HomePage from './pages/HomePage';
-import NewEventPage,{action as newEventAction} from './pages/NewEventPage';
+import NewEventPage from './pages/NewEventPage';
 import RootLayout from './pages/Root';
 import {createBrowserRouter} from 'react-router-dom'
 import {action as manipulateEventAction} from './components/EventForm';
+import NewsletterPage, { action as newsletterAction } from './pages/Newsletter';
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -53,7 +55,11 @@ export const router = createBrowserRouter([
           },
         ] 
       },
-      
+      {
+        path: 'newsletter',
+        element: <NewsletterPage />,
+        action: newsletterAction,
+      },
     ]
   }
 ])
