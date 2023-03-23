@@ -1,4 +1,4 @@
-import {useLoaderData,json} from 'react-router-dom'
+import {useLoaderData,json,defer} from 'react-router-dom'
 import EventsList from '../components/EventsList';
 function EventsPage() {
   const data = useLoaderData();
@@ -15,7 +15,8 @@ function EventsPage() {
 
 export default EventsPage;
 
-export async function loader(){
+
+export async function loadEvents(){
   const response = await fetch('http://localhost:8080/events');
 
   if (!response.ok) {
@@ -33,4 +34,9 @@ export async function loader(){
   } else {
     return response;
   }
+}
+export async function loader(){
+  defer({
+    events: loadEvents()
+  })
 }
