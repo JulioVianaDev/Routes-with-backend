@@ -1,16 +1,11 @@
-import {useLoaderData,json,defer} from 'react-router-dom'
+import {useLoaderData,json,defer,Await} from 'react-router-dom'
 import EventsList from '../components/EventsList';
 function EventsPage() {
-  const data = useLoaderData();
-  const events = data.events;
-  if(data.isError){
-    return <p>{data.message}</p>
-  }
-  return (
-    <>
-      <EventsList events={events} />
-    </>
-  );
+  const {events} = useLoaderData();
+
+  return <Await resolve={events}>
+    {(loadEvents)=><EventsList events={loadEvents}/>}
+  </Await>
 }
 
 export default EventsPage;
